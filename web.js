@@ -5,6 +5,7 @@ var index = fs.readFileSync('index.html');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
   response.send(index);
 });
 
